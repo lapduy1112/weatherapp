@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    transition:0.4s;
+    background-image: url(hot.png) no-repeat center/cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1)) ;
+}
+#weather{
+    min-width: 350px;
+    height: 600px;
+    padding: 30px 20px;
+    border-radius:10px;
+    text-align: center;
+	background: url(hot.png) no-repeat center/cover;
+}
+body.hot #weather{
+    background: url(hot.png) no-repeat center/cover;
+}
+body.cold #weather{
+    background: url(cold.png) no-repeat center/cover;
+}
+body.warm #weather{
+    background: url(warm.png) no-repeat center/cover;
+}
+body.cool #weather{
+    background: url(cool.png) no-repeat center/cover;
+}
+#weather .search{
+    padding:10px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius:0 15px 0 15px;
+    background-color: rgba(255,255,255,0.4);
+    transition: 0.4s;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+}
+#weather input:focus{
+    border-radius: 15px 0 15px 0;
+    background-color: rgba(255, 255, 255, 0.863);
+}
+.content {
+    color: #fff;
+}
+.content .hide {
+    visibility:hidden;
+}
+
+.content .name {
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.content .time{
+    font-size: 16px;
+    margin: 10px 10px;
+}
+.content .temparature{
+    font-size:65px;
+    text-shadow: 4px 4px rgba(0,0,0,0.5);
+    background-color:rgba(255, 255, 255, 0.4);
+    border-radius:15px;
+    box-shadow:  5px 4px rgba(0, 0, 0, 0.5);
+    margin: 20px 0 30px;
+    padding: 15px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.content .short-des{
+    font-size:40px;
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.content .more-des{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top: 20px;
+}
+.content .more-des > div{
+    display:flex;
+    flex-direction: column;
+    font-size:16px;
+    margin-top: 10px;
+}
+
+.content .more-des > div > span{
+    padding-top: 15px;
+}
